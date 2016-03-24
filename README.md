@@ -9,6 +9,10 @@ DUMP_LOCATION
     this can be useful for cases where you want to mount a persistent disk and
     retain a copy of the backup. Defaults to /tmp.
 
+WAIT_AFTER_RUN
+    If set, the container will stay alive at the end of the run. This can be
+    useful for debugging purposes.
+
 SOURCE_PG_HOST
 SOURCE_PG_USER
 SOURCE_PG_PORT
