@@ -14,13 +14,19 @@ WAIT_AFTER_RUN
     useful for debugging purposes.
 
 SOURCE_PG_HOST
+
 SOURCE_PG_USER
+
 SOURCE_PG_PORT
+
 SOURCE_PG_DBNAME
 
 TARGET_PG_HOST
+
 TARGET_PG_USER
+
 TARGET_PG_PORT
+
 TARGET_PG_DBNAME
 
 ## Example
@@ -36,5 +42,5 @@ c4a023e46b2a        postgres            "/docker-entrypoint.s"   12 days ago    
 Running this command would create a backup of `api-db`'s `main` db and load it into `api-db-backup` as `main2`:
 
 ```
-docker run -it --link api-db:db  --link api-db-backup:db2 -e SOURCE_PG_HOST=db -e SOURCE_PG_USER=user1 -e SOURCE_PG_DBNAME=main -e TARGET_PG_HOST=db2 -e TARGET_PG_USER=user1 -e TARGET_PG_DBNAME=main2 pg-backup:test
+docker run -it --link api-db:db  --link api-db-backup:db2 -e SOURCE_PG_HOST=db -e SOURCE_PG_USER=user1 -e SOURCE_PG_DBNAME=main -e TARGET_PG_HOST=db2 -e TARGET_PG_USER=user1 -e TARGET_PG_DBNAME=main2 ployst/postgres-backup
 ```
